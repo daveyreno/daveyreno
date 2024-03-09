@@ -6,6 +6,7 @@ import Logo from "../components/Logo";
 import Navigation from "../components/Navigation";
 import { ThemeProvider } from "../components/Theme-Provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
               </div>
             </div>
             <Footer />
+            <Analytics />
           </TooltipProvider>
         </ThemeProvider>
       </body>
