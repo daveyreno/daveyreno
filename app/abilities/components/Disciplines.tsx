@@ -38,7 +38,7 @@ export default function Disciplines() {
       <div className="flex flex-col md:flex-row gap-4">
         {disciplines.map((discipline, index) => (
           <div
-            key={discipline.title}
+            key={index}
             className="w-full md:w-1/3 flex flex-col border rounded-xl p-6 space-y-5"
           >
             <h2 className="text-2xl font-bold tracking-tight">

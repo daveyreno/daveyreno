@@ -41,9 +41,9 @@ export default function RootLayout({
               </div>
             </div>
             <Footer />
-            <Analytics />
           </TooltipProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

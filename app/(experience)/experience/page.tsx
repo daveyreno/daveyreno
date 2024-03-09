@@ -12,7 +12,10 @@ export default function ExperiencePage() {
       <SubTitle text="Greatest Hits" />
 
       {experiences.map((experience, index) => (
-        <div className="border rounded-xl p-3 grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div
+          key={index}
+          className="border rounded-xl p-3 grid grid-cols-1 md:grid-cols-2 gap-3"
+        >
           <AspectRatio
             ratio={16 / 9}
             className={`rounded-lg p-4 flex justify-center items-center text-xs w-full  ${
@@ -41,7 +44,9 @@ export default function ExperiencePage() {
 
               <div className="flex gap-2 flex-wrap">
                 {experience.badges.map((badge, index) => (
-                  <Badge variant={"outline"}>{badge}</Badge>
+                  <Badge key={index} variant={"outline"}>
+                    {badge}
+                  </Badge>
                 ))}
               </div>
             </div>
