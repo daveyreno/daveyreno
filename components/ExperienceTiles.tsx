@@ -2,37 +2,7 @@ import { Eye } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-
-const experiences = [
-  {
-    company: "Lendi",
-    date: "2021 - Present",
-    linkpath: "/experience",
-    image: "/lendi-logo.svg",
-    style: "bg-gradient-to-br to-sky-950 from-emerald-600",
-  },
-  {
-    company: "Cranetime",
-    date: "2017 - 2021",
-    linkpath: "/experience",
-    image: "/cranetime-logo.svg",
-    style: "bg-gradient-to-br from-blue-600 to-blue-900",
-  },
-  {
-    company: "LEGALNET",
-    date: "2013 - 2017",
-    linkpath: "/experience",
-    image: "/legalnet-logo.svg",
-    style: "bg-gradient-to-br from-purple-600 to-purple-900",
-  },
-  {
-    company: "Crazy Domains",
-    date: "2009 - 2016",
-    linkpath: "/experience",
-    image: "/crazydomains-logo.svg",
-    style: "bg-gradient-to-br from-green-600 to-green-900",
-  },
-];
+import { experiences } from "@/data/experiences";
 
 export default function ExperienceTiles() {
   return (
