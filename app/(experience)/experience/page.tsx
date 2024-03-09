@@ -14,8 +14,8 @@ const experiences = [
     image: "/lendi-logo.svg",
     style: "bg-gradient-to-br to-sky-950 from-emerald-600",
     copy: [
-      "One of Australia’s fastest growing fintechs, building market leading technology to transform the home loan industry through our powerhouse property brands and networks - Aussie and Lendi.",
-      "Lendi Group exists to transform the stressful, disjointed and sometimes overwhelming journey of financing a property into a friction-free experience for everyone involved.",
+      "Onboarded as Lendi merged with Aussie to become the largest home loan originator behind the big banks. A sophisticated event driven microservice system powers Lendi, while Aussie had older infrastructure to be retired.",
+      "Successfully delivered an interplatform sync to allow seemless integration, delivered bespoke notification system, provided self-service customer features to improve support efficiency, a referrals system for brokers and customers.",
     ],
     badges: [
       "Fintech",
@@ -72,7 +72,7 @@ export default function ExperiencePage() {
       <SubTitle text="Greatest Hits" />
 
       {experiences.map((experience, index) => (
-        <div className="border rounded-xl p-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="border rounded-xl p-3 grid grid-cols-1 md:grid-cols-2 gap-3">
           <AspectRatio
             ratio={16 / 9}
             className={`rounded-lg p-4 flex justify-center items-center text-xs w-full  ${
@@ -84,22 +84,22 @@ export default function ExperiencePage() {
               width={"300"}
               height={"200"}
               alt={`${experience.company} Logo`}
-              className="rounded-md object-cover"
+              className="rounded-md object-cover w-full h-auto max-w-40 lg:max-w-56 xl:max-w-64"
             />
           </AspectRatio>
-          <div className="w-full space-y-8">
+          <div className="w-full space-y-8 p-4">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tight">
                 {experience.company}
               </h2>
 
-              <div className="text-slate-400 flex gap-2">
+              <div className="text-slate-400 flex flex-col lg:flex-row gap-2">
                 <p>{experience.role}</p>
-                <p className="text-slate-500">&#x2022;</p>
+                <p className="text-slate-500 hidden lg:block">&#x2022;</p>
                 <p className="text-slate-00">{experience.date}</p>
               </div>
 
-              <div className="space-x-2">
+              <div className="flex gap-2 flex-wrap">
                 {experience.badges.map((badge, index) => (
                   <Badge variant={"outline"}>{badge}</Badge>
                 ))}
