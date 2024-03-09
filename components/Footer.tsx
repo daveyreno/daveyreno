@@ -21,12 +21,6 @@ export default function Footer() {
           >
             <Github />
           </Link>
-          <Link
-            href="https://dribbble.com/daveyreno"
-            className="rounded-full p-2 border hover:scale-125 hover:bg-primary-foreground transition-all duration-300"
-          >
-            <Dribbble />
-          </Link>
         </div>
         <div className=" text-xs text-slate-400">© {currentYear}</div>
       </div>
