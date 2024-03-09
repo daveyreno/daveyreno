@@ -9,7 +9,7 @@ export default function AbilitiesPage() {
     <div className="space-y-6">
       <PageTitle text="Abilities" />
       <Disciplines />
-      <Tools />
+      {/* <Tools /> */}
       <Playbook />
     </div>
   );
