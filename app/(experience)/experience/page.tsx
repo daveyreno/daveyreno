@@ -33,7 +33,7 @@ const experiences = [
     image: "/cranetime-logo.svg",
     style: "bg-gradient-to-br from-blue-600 to-blue-900",
     copy: [
-      "Singlehandidly developed design system, delivered MVP and went on to coach teams to continually deliver value for major construction sites globally.",
+      "Singlehandidly developed design system, delivered MVP and went on to coach teams to continually refine and iterate the product to deliver value for major construction sites globally.",
       "Cranetime was the first of its kind construction site crane and delivery scheduling system (many copycats today), and used on over 20bn projects, acquired in 2021.",
     ],
     badges: ["Contech", "Logistics", "Startup", "Monolythic"],
