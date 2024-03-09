@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
-export const experiences = [
+const experiences = [
   {
     company: "Lendi",
     role: "Senior Product Manager",
