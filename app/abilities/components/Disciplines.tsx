@@ -7,7 +7,7 @@ const disciplines = [
     progress: 95,
     competency: "Master",
     copy: [
-      "With 14 years of experience in building digital products, I bring a wealth of knowledge and a proven track record practicing continuous discovery and delivery. My leadership extends beyond traditional boundaries, having led multiple cross-functional teams to success by fostering collaboration, innovation, and coaching. I am fanatical about quickly understanding customer needs, grasping business goals and metrics, aligning project objectives with strategic business outcomes.",
+      "With 14 years of experience in building digital products, I bring a wealth of knowledge and a proven track record practicing continuous discovery and delivery. My leadership extends beyond traditional boundaries, having led multiple cross-functional teams to success by fostering collaboration, innovation, and coaching. I am fanatical about quickly understanding customer needs, grasping business goals and metrics, aligning and delivering project objectives with strategic business outcomes.",
       "My background spans early-stage startups to large corporate entities and has equipped me with the unique ability to navigate and thrive in diverse environments, ensuring that each product I touch not only meets market demands but sets new benchmarks for excellence.",
     ],
   },

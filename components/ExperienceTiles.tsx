@@ -97,7 +97,7 @@ export default function ExperienceTiles() {
               width={"300"}
               height={"200"}
               alt={`${experience.company} Logo`}
-              className="rounded-md object-cover"
+              className="rounded-md object-cover w-full h-auto max-w-40 lg:max-w-56 xl:max-w-64"
             />
           </AspectRatio>
         </Link>
