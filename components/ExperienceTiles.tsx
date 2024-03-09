@@ -9,7 +9,7 @@ export default function ExperienceTiles() {
     <div className="grid grid-cols-6 gap-4">
       {experiences.map((experience, index) => (
         <Link
-          href={experience.linkpath}
+          href="/experience"
           key={index}
           className="col-span-6 md:col-span-3 gap-3 flex-col p-3 group justify-between flex rounded-2xl border"
         >

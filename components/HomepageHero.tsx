@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Contact from "./ContactDialog";
+import Link from "next/link";
 
 export default function HomepageHero() {
   return (
@@ -14,9 +15,11 @@ export default function HomepageHero() {
         contributes to company goals.
       </p>
       <div className="flex gap-3 justify-center font-medium">
-        <Button variant={"outline"} size={"lg"}>
-          Learn More
-        </Button>
+        <Link href="/abilities">
+          <Button variant={"outline"} size={"lg"}>
+            Learn More
+          </Button>
+        </Link>
         <Contact />
       </div>
     </div>
