@@ -2,6 +2,7 @@ import PageTitle from "@/components/typography/PageTitle";
 import SubTitle from "@/components/typography/SubTitle";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
+import { Metadata } from "next";
 import Image from "next/image";
 
 const experiences = [
@@ -64,6 +65,12 @@ const experiences = [
     badges: ["Web Services", "Growth", "Startup"],
   },
 ];
+
+export const metadata: Metadata = {
+  title: "DaveyReno Experience",
+  description:
+    "Explore the extensive experience of DaveyReno, a seasoned Product Manager whose strategic vision and leadership have yielded groundbreaking products and market.",
+};
 
 export default function ExperiencePage() {
   return (
