@@ -8,7 +8,7 @@ export default function HomepageHero() {
       <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
         I am a Product Manager
       </h1>
-      <p className="text-xl">
+      <p className="text-xl text-slate-500">
         Meticulous in the detail, a great communicator and utterly relentless
         <br />
         in constantly delivering products that customers love <br />& value that

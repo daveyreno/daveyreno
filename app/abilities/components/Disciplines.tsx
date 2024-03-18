@@ -51,7 +51,9 @@ export default function Disciplines() {
               </p>
             </div>
             {discipline.copy.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <p key={index} className="">
+                {paragraph}
+              </p>
             ))}
           </div>
         ))}
