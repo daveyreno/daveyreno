@@ -191,7 +191,7 @@ export default function AbilitiesPage() {
               </p>
             </div>
             <p>
-              You can't build everything. Kill good ideas. Cut features that
+              You can't build everything. Even good ideas need to wait. Cut features that
               don't move the needle. Say no to stakeholders, say no to your own
               ideas. If it's not the most important thing, it doesn't ship.
               Deciding what to cut is more important than deciding what to
