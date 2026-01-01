@@ -24,8 +24,8 @@ export default function Hero() {
           />
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
-          I obsess over the details, move fast with intent and relentlessly
-          deliver products customers love ❤️ driving measurable business impact.
+          I build thoughtful products, move fast with purpose, and deliver
+          results that users <span className="whitespace-nowrap">love ❤️</span>
         </p>
         <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap px-2">
           <Button variant="outline" className="w-full sm:w-auto" asChild>

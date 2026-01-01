@@ -23,9 +23,9 @@ export default function ConvincedYet({
               Let's build something amazing together
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <HireMeButton size="lg" />
-            <Button variant="outline" asChild size="lg">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap px-2">
+            <HireMeButton className="w-full sm:w-auto" />
+            <Button variant="outline" className="w-full sm:w-auto" asChild>
               <Link href={secondaryButtonHref}>{secondaryButtonText}</Link>
             </Button>
           </div>
