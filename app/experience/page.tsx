@@ -1,10 +1,8 @@
 import PageTitle from "@/components/common/PageTitle";
 import SectionTitle from "@/components/common/SectionTitle";
-import { HireMeButton } from "@/components/common/HireMeButton";
+import ConvincedYet from "@/components/common/ConvincedYet";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function ExperiencePage() {
   return (
@@ -316,26 +314,10 @@ export default function ExperiencePage() {
         </div>
       </div>
 
-      <div className="mt-12">
-        <div className="border rounded-2xl p-8 sm:p-12">
-          <div className="text-center space-y-6">
-            <div>
-              <p className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter mb-2">
-                Convinced Yet?
-              </p>
-              <p className="text-sm sm:text-base text-muted-foreground">
-                Let's build something amazing together
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <HireMeButton size="lg" />
-              <Button variant="outline" asChild size="lg">
-                <Link href="/abilities">Abilities</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ConvincedYet
+        secondaryButtonText="Abilities"
+        secondaryButtonHref="/abilities"
+      />
     </div>
   );
 }

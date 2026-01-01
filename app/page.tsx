@@ -1,6 +1,7 @@
 import Hero from "@/components/common/Hero";
 import HomeAbilities from "@/components/common/HomeAbilities";
 import HomeExperience from "@/components/common/HomeExperience";
+import ConvincedYet from "@/components/common/ConvincedYet";
 
 export default function Home() {
   return (
@@ -8,6 +9,12 @@ export default function Home() {
       <Hero />
       <HomeAbilities />
       <HomeExperience />
+      <div className="max-w-7xl mx-auto w-full">
+        <ConvincedYet
+          secondaryButtonText="View Abilities"
+          secondaryButtonHref="/abilities"
+        />
+      </div>
     </div>
   );
 }

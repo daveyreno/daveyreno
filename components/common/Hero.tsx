@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 import { HireMeButton } from "./HireMeButton";
 
@@ -13,8 +14,8 @@ export default function Hero() {
           deliver products customers love ❤️ driving measurable business impact.
         </p>
         <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap px-2">
-          <Button variant="outline" className="w-full sm:w-auto">
-            Learn More
+          <Button variant="outline" className="w-full sm:w-auto" asChild>
+            <Link href="/abilities">Learn More</Link>
           </Button>
           <HireMeButton className="w-full sm:w-auto" />
         </div>

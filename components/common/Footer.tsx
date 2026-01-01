@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="flex gap-4">
         <Button variant="outline" size="icon" className="rounded-full" asChild>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/dave-r/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -17,7 +17,7 @@ export default function Footer() {
         </Button>
         <Button variant="outline" size="icon" className="rounded-full" asChild>
           <a
-            href="https://github.com"
+            href="https://github.com/daveyreno/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"

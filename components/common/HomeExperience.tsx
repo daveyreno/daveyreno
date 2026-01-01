@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import SectionTitle from "./SectionTitle";
 
@@ -11,7 +12,7 @@ export default function HomeExperience() {
             You?
           </span>
         </div>
-        <div className="rounded-lg p-4 sm:p-6 bg-gradient-to-br from-neutral-900 via-neutral-850 to-neutral-600 flex items-center justify-center aspect-[4/3] relative">
+        <Link href="/experience" className="rounded-lg p-4 sm:p-6 bg-gradient-to-br from-neutral-900 via-neutral-850 to-neutral-600 flex items-center justify-center aspect-[4/3] relative hover:opacity-90 transition-opacity">
           <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex flex-row gap-2">
             <Badge
               variant="outline"
@@ -35,8 +36,8 @@ export default function HomeExperience() {
             className="object-contain h-auto w-full max-w-[120px] sm:max-w-[140px] md:max-w-[160px] brightness-0 invert"
             src="/soar-inc-logo.svg"
           />
-        </div>
-        <div className="rounded-lg p-4 sm:p-6 bg-gradient-to-br to-sky-950 from-emerald-600 flex items-center justify-center aspect-[4/3] relative">
+        </Link>
+        <Link href="/experience" className="rounded-lg p-4 sm:p-6 bg-gradient-to-br to-sky-950 from-emerald-600 flex items-center justify-center aspect-[4/3] relative hover:opacity-90 transition-opacity">
           <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex flex-row gap-2">
             <Badge
               variant="outline"
@@ -62,8 +63,8 @@ export default function HomeExperience() {
             style={{ color: "transparent" }}
             src="/lendi-logo.svg"
           />
-        </div>
-        <div className="rounded-lg p-4 sm:p-6 bg-gradient-to-br from-blue-600 to-blue-900 flex items-center justify-center aspect-[4/3] relative">
+        </Link>
+        <Link href="/experience" className="rounded-lg p-4 sm:p-6 bg-gradient-to-br from-blue-600 to-blue-900 flex items-center justify-center aspect-[4/3] relative hover:opacity-90 transition-opacity">
           <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex flex-row gap-2">
             <Badge
               variant="outline"
@@ -89,8 +90,8 @@ export default function HomeExperience() {
             style={{ color: "transparent" }}
             src="/cranetime-logo.svg"
           />
-        </div>
-        <div className="rounded-lg p-4 sm:p-6 bg-gradient-to-br from-purple-600 to-purple-900 flex items-center justify-center aspect-[4/3] relative">
+        </Link>
+        <Link href="/experience" className="rounded-lg p-4 sm:p-6 bg-gradient-to-br from-purple-600 to-purple-900 flex items-center justify-center aspect-[4/3] relative hover:opacity-90 transition-opacity">
           <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex flex-row gap-2">
             <Badge
               variant="outline"
@@ -116,8 +117,8 @@ export default function HomeExperience() {
             style={{ color: "transparent" }}
             src="/legalnet-logo.svg"
           />
-        </div>
-        <div className="rounded-lg p-4 sm:p-6 bg-gradient-to-br from-red-600 to-yellow-500 flex items-center justify-center aspect-[4/3] relative">
+        </Link>
+        <Link href="/experience" className="rounded-lg p-4 sm:p-6 bg-gradient-to-br from-red-600 to-yellow-500 flex items-center justify-center aspect-[4/3] relative hover:opacity-90 transition-opacity">
           <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex flex-row gap-2">
             <Badge
               variant="outline"
@@ -143,7 +144,7 @@ export default function HomeExperience() {
             style={{ color: "transparent" }}
             src="/crazydomains-logo.svg"
           />
-        </div>
+        </Link>
       </div>
     </div>
   );

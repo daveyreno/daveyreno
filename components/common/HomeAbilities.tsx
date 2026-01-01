@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ChevronRightIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import SectionTitle from "./SectionTitle";
@@ -8,7 +9,7 @@ export default function HomeAbilities() {
       <SectionTitle title="Abilities" />
       <div className="border rounded-xl overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x">
-          <div className="p-4 sm:p-6 relative space-y-3 sm:space-y-4">
+          <Link href="/abilities" className="p-4 sm:p-6 relative space-y-3 sm:space-y-4 hover:bg-accent/50 transition-colors block">
             <p className="text-xl sm:text-2xl font-bold tracking-tighter">
               Strategy
             </p>
@@ -21,8 +22,8 @@ export default function HomeAbilities() {
                 <ChevronRightIcon className="w-4 h-4" />
               </Button>
             </div>
-          </div>
-          <div className="p-4 sm:p-6 relative space-y-3 sm:space-y-4">
+          </Link>
+          <Link href="/abilities" className="p-4 sm:p-6 relative space-y-3 sm:space-y-4 hover:bg-accent/50 transition-colors block">
             <p className="text-xl sm:text-2xl font-bold tracking-tighter">
               Delivery
             </p>
@@ -35,8 +36,8 @@ export default function HomeAbilities() {
                 <ChevronRightIcon className="w-4 h-4" />
               </Button>
             </div>
-          </div>
-          <div className="p-4 sm:p-6 relative space-y-3 sm:space-y-4">
+          </Link>
+          <Link href="/abilities" className="p-4 sm:p-6 relative space-y-3 sm:space-y-4 hover:bg-accent/50 transition-colors block">
             <p className="text-xl sm:text-2xl font-bold tracking-tighter">
               Leadership
             </p>
@@ -49,7 +50,7 @@ export default function HomeAbilities() {
                 <ChevronRightIcon className="w-4 h-4" />
               </Button>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
