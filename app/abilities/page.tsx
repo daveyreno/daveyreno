@@ -1,6 +1,8 @@
+"use client";
+
+import ConvincedYet from "@/components/common/ConvincedYet";
 import PageTitle from "@/components/common/PageTitle";
 import SectionTitle from "@/components/common/SectionTitle";
-import ConvincedYet from "@/components/common/ConvincedYet";
 import { Progress } from "@/components/ui/progress";
 import {
   Briefcase,
@@ -17,8 +19,23 @@ import {
   Users,
   Zap,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function AbilitiesPage() {
+  const [productProgress, setProductProgress] = useState(0);
+  const [designProgress, setDesignProgress] = useState(0);
+  const [engineeringProgress, setEngineeringProgress] = useState(0);
+
+  useEffect(() => {
+    // Animate progress bars on mount
+    const timer = setTimeout(() => {
+      setProductProgress(98);
+      setDesignProgress(85);
+      setEngineeringProgress(75);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="p-4 max-w-7xl mx-auto">
       <PageTitle title="Abilities" />
@@ -31,7 +48,7 @@ export default function AbilitiesPage() {
               <Briefcase className="w-10 h-10 mb-3" />
               <p className="text-2xl font-bold tracking-tighter">Product</p>
             </div>
-            <Progress value={98} className="mb-3" />
+            <Progress value={productProgress} className="mb-3" />
             <p className="text-xs text-muted-foreground uppercase mb-6">
               Master
             </p>
@@ -63,7 +80,7 @@ export default function AbilitiesPage() {
               <Palette className="w-10 h-10 mb-3" />
               <p className="text-2xl font-bold tracking-tighter">Design</p>
             </div>
-            <Progress value={85} className="mb-3" />
+            <Progress value={designProgress} className="mb-3" />
             <p className="text-xs text-muted-foreground uppercase mb-6">
               Advanced
             </p>
@@ -94,7 +111,7 @@ export default function AbilitiesPage() {
               <Code className="w-10 h-10 mb-3" />
               <p className="text-2xl font-bold tracking-tighter">Engineering</p>
             </div>
-            <Progress value={75} className="mb-3" />
+            <Progress value={engineeringProgress} className="mb-3" />
             <p className="text-xs text-muted-foreground uppercase mb-6">
               Proficient
             </p>
@@ -191,11 +208,11 @@ export default function AbilitiesPage() {
               </p>
             </div>
             <p>
-              You can't build everything. Even good ideas need to wait. Cut features that
-              don't move the needle. Say no to stakeholders, say no to your own
-              ideas. If it's not the most important thing, it doesn't ship.
-              Deciding what to cut is more important than deciding what to
-              build.
+              You can't build everything. Even good ideas need to wait. Cut
+              features that don't move the needle. Say no to stakeholders, say
+              no to your own ideas. If it's not the most important thing, it
+              doesn't ship. Deciding what to cut is more important than deciding
+              what to build.
             </p>
           </div>
           <div className="border rounded-2xl p-6">
