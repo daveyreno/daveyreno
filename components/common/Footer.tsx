@@ -26,7 +26,9 @@ export default function Footer() {
           </a>
         </Button>
       </div>
-      <p className="text-sm text-muted-foreground">© 2025</p>
+      <p className="text-sm text-muted-foreground">
+        © {new Date().getFullYear()}
+      </p>
     </div>
   );
 }
