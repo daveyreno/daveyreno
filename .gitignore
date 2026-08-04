@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local-only. this repo is public and is linked from the site footer, so
+# nothing personal or internal goes in it.
+/*.pdf
+/PRODUCT.md
+/.claude/

@@ -1,32 +1,29 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-html {
-  font-size: 18px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* =============================================================================
+   DAVE REYNOLDS — 2026
+   A near-black ground carrying one continuous dye field. Type is small,
+   top-aligned and columnar; scale contrast does the shouting, not weight.
+   The field is the only colour on the site. Nothing else is allowed to add any.
+   ========================================================================== */
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-archivo);
   --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
+
+  --color-ink: var(--ink);
+  --color-ink-body: var(--ink-body);
+  --color-ink-dim: var(--ink-dim);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+
+  /* shadcn primitives still back the contact dialog and buttons. */
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -43,89 +40,338 @@ html {
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+  --radius-xl: var(--radius);
+  --radius-2xl: var(--radius);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* The world has one corner language: none. Nothing on this site is rounded
+     except the pill-shaped availability marker, which sets its own radius. */
+  --radius: 0px;
+
+  --ground: #060608;
+  --background: var(--ground);
+  --foreground: #f4f4f2;
+
+  --ink: #f4f4f2;
+  /* Reading text sits brighter than secondary UI text; 62% is fine for a label
+     and too dim for three paragraphs. */
+  --ink-body: rgb(244 244 242 / 0.80);
+  --ink-dim: rgb(244 244 242 / 0.62);
+  --ink-faint: rgb(244 244 242 / 0.38);
+  --rule: rgb(244 244 242 / 0.12);
+  --rule-strong: rgb(244 244 242 / 0.28);
+
+  --card: rgb(255 255 255 / 0.03);
+  --card-foreground: var(--ink);
+  --popover: #0b0b0f;
+  --popover-foreground: var(--ink);
+  --primary: #f4f4f2;
+  --primary-foreground: #060608;
+  --secondary: rgb(255 255 255 / 0.06);
+  --secondary-foreground: var(--ink);
+  --muted: rgb(255 255 255 / 0.05);
+  --muted-foreground: var(--ink-dim);
+  --accent: rgb(255 255 255 / 0.08);
+  --accent-foreground: var(--ink);
+  --destructive: #ff6b5a;
+  --border: var(--rule);
+  --input: rgb(255 255 255 / 0.14);
+  --ring: rgb(244 244 242 / 0.55);
+
+  /* Rhythm. One scale, used everywhere. */
+  --gut: clamp(1.25rem, 3.2vw, 2.75rem);
+  --stack: clamp(4.5rem, 11vh, 8rem);
+  --measure: 34rem;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  background: var(--ground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
+    min-width: 0;
   }
+
   body {
-    @apply bg-background text-foreground;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* Tailwind v4's preflight sets buttons to cursor:default. Every button on
+     this site is a real action, so it gets a pointer. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--ground);
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--ink);
+    outline-offset: 3px;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 }
+
+/* -------------------------------------------------------------- skip link */
+
+.skip {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  background: var(--ink);
+  color: var(--ground);
+  padding: 0.65rem 1rem;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: transform 220ms ease;
+}
+
+.skip:focus-visible {
+  transform: none;
+}
+
+/* ------------------------------------------------------------------- field */
+
+.field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Shown until WebGL reports ready, and forever if it never does. Same S-curve,
+   same seven signatures — a still frame of the same idea, not a different one. */
+/* Plain dark ground. The simulation is the background now; a decorative
+   gradient underneath it only ever showed through as haze. Clients with no
+   WebGL2 get an honest black page rather than an imitation of the real thing. */
+.field__fallback {
+  position: absolute;
+  inset: 0;
+  background: var(--ground);
+}
+
+.field__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.field__canvas[data-live="true"] {
+  opacity: 1;
+}
+
+/* Keeps small type legible wherever the dye happens to be bright. */
+.field__scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgb(6 6 8 / 0.55) 0%, rgb(6 6 8 / 0.10) 30%, rgb(6 6 8 / 0.16) 70%, rgb(6 6 8 / 0.72) 100%);
+}
+
+/* Sections past the first viewport sit on their own ground so long-form text
+   is never read over live colour. */
+.plate {
+  position: relative;
+  background: linear-gradient(to bottom, rgb(6 6 8 / 0) 0%, rgb(6 6 8 / 0.90) 12%, rgb(6 6 8 / 0.94) 100%);
+}
+
+/* ------------------------------------------------------------------- type
+
+   These live in @layer components on purpose. Unlayered CSS outranks every
+   layered rule, so an unlayered `.label { color }` silently beat Tailwind's
+   `hover:text-*` utilities and hover states never fired. Inside `components`,
+   utilities win, which is what every call site expects. */
+
+@layer components {
+
+.shell {
+  width: 100%;
+  max-width: 96rem;
+  margin-inline: auto;
+  padding-inline: var(--gut);
+}
+
+/* The site's one voice for labels: mono, tiny, wide, upper. Used for every
+   piece of metadata — years, disciplines, section numbers, nav. */
+.label {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.6875rem;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.label--bright {
+  color: var(--ink-dim);
+}
+
+/* Display sizes. Width axis tightens as size grows, so the big type packs. */
+.d1 {
+  font-size: clamp(2.75rem, 9.5vw, 8.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+  font-stretch: 96%;
+}
+
+/* The dye moves with the pointer, so any type over the field can end up on a
+   bright core. A wide, very soft shadow is invisible against the near-black
+   ground and holds contrast when colour passes underneath. */
+.d1,
+.lede {
+  text-shadow: 0 0 28px rgb(6 6 8 / 0.55), 0 1px 3px rgb(6 6 8 / 0.4);
+}
+
+.d2 {
+  font-size: clamp(2rem, 5.6vw, 4.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+
+.d3 {
+  font-size: clamp(1.375rem, 2.4vw, 2rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.lede {
+  font-size: clamp(1.125rem, 1.6vw, 1.4375rem);
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  color: var(--ink-dim);
+}
+
+/* Long-form reading text. Sized and lifted deliberately: at 15px and 62% ink
+   this was technically legible and genuinely tiring, which is the wrong trade
+   on the one page a recruiter actually reads end to end. */
+.body {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  letter-spacing: -0.005em;
+  color: var(--ink-body);
+  max-width: var(--measure);
+}
+
+/* --------------------------------------------------------------- reveal */
+
+/* One orchestrated entrance, not scattered hover effects. Elements declare a
+   delay with --d; the parent flips [data-shown] once.
+
+   The hidden state is scoped to html.js, a class set synchronously by an inline
+   script in the document head. Without it, a visitor whose JavaScript failed —
+   or a crawler — would get a permanently blank page, because nothing would ever
+   flip [data-shown]. Content visible by default, animation as the enhancement. */
+.rise {
+  transition:
+    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--d, 0ms);
+}
+
+html.js [data-shown="false"] .rise,
+html.js .rise[data-shown="false"] {
+  opacity: 0;
+  transform: translateY(0.9rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .field__canvas {
+    transition: none;
+  }
+}
+
+/* ---------------------------------------------------------------- rules */
+
+.rule-top {
+  border-top: 1px solid var(--rule);
+}
+
+/* A link that underlines from the left on hover — the site's only link idiom. */
+.ul {
+  position: relative;
+  color: var(--ink-dim);
+  text-decoration: none;
+  transition: color 260ms ease;
+}
+
+.ul:hover,
+.ul:focus-visible {
+  color: var(--ink);
+}
+
+.ul::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.15em;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ul:hover::after,
+.ul:focus-visible::after {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ul::after {
+    transition: none;
+  }
+}
+
+} /* @layer components */
