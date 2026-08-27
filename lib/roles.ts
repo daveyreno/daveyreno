@@ -52,6 +52,27 @@ export const ROLES: Role[] = [
     group: "hits",
   },
   {
+    id: "supadrone",
+    name: "SupaDrone",
+    title: "Product Consultant",
+    span: "Aug 2026",
+    from: 2026,
+    to: 2026,
+    sector: "AeroTech",
+    tags: ["Consulting", "Aviation", "GTM Strategy", "0 to 1"],
+    headline: "Business case to working product, in three days.",
+    body: [
+      "SupaDrone sells persistent aerial intelligence: drone pods left permanently on industrial sites, so an operations manager can order an inspection without owning an aircraft or hiring a pilot. I took the whole thing end to end, on my own, in three days.",
+      "I wrote the business case: which customers to build for, the two-sided model that makes the network defensible, the financial forecast, the go-to-market. Then I designed and built the rest of it myself. The brand, the marketing site, and an MVP app carrying the whole commercial model, from the request wizard through pod scheduling to a wallet that bills per flight and pays hosts for missions flown from their pod.",
+    ],
+    logo: { src: "/supadrone-logo.svg", width: 1823, height: 348 },
+    url: "https://supadrone.com/",
+    gradient:
+      "radial-gradient(118% 96% at 20% 82%, #33353C 0%, rgba(51,53,60,0) 60%), linear-gradient(30deg, #26282D 0%, #131418 52%, #09090A 100%)",
+    logoMax: "clamp(190px, 22vw, 288px)",
+    group: "hits",
+  },
+  {
     id: "soar",
     name: "Soar",
     title: "Head of Product",
@@ -166,7 +187,7 @@ export const ROLES: Role[] = [
       "I built this one because I wanted to build it. I do the product, the design and the engineering, and seeing more businesses pick it up has been the best part.",
     ],
     logo: { src: "/bookables-light.svg", width: 2634, height: 365 },
-    url: "https://www.bookables.com.au/",
+    url: "https://bookables.ai/",
     gradient:
       "radial-gradient(120% 96% at 78% 82%, #FB923C 0%, rgba(251,146,60,0) 60%), linear-gradient(20deg, #C2410C 0%, #6B2308 52%, #180801 100%)",
     logoMax: "clamp(200px, 23vw, 300px)",

@@ -28,6 +28,7 @@ const sig = (id: string, css: string): FieldSignature => ({
 
 export const SIGNATURES: Record<string, FieldSignature> = {
   rememberr: sig("rememberr", "#0BA6C9"),
+  supadrone: sig("supadrone", "#F2B824"),
   soar: sig("soar", "#9AA7B4"),
   lendi: sig("lendi", "#10B981"),
   cranetime: sig("cranetime", "#3B82F6"),
@@ -39,6 +40,7 @@ export const SIGNATURES: Record<string, FieldSignature> = {
 /** Field order = career order, most recent first. The dye reads left to right. */
 export const FIELD_ORDER = [
   "rememberr",
+  "supadrone",
   "soar",
   "lendi",
   "cranetime",

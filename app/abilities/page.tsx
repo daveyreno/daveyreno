@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Footer from "@/components/common/Footer";
 import Reveal from "@/components/site/Reveal";
+import Toolchain from "@/components/site/Toolchain";
 import { DISCIPLINES, PLAYBOOK } from "@/lib/abilities";
 
 export const metadata: Metadata = {
   title: "Abilities",
   description:
-    "Product, design and engineering, and the ten rules I actually run on.",
+    "Product, design and engineering, how I build with AI, and the ten rules I actually run on.",
   alternates: { canonical: "/abilities" },
 };
 
@@ -78,6 +79,37 @@ export default function AbilitiesPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------ ai */}
+      {/* Its own section rather than a fourth discipline: the three above are
+          things I do, this is how they now get done. */}
+      <section className="plate">
+        {/* Padded at the foot as well as the head: the blocks are the last
+            thing in the section, and without it the ground stopped dead on
+            their bottom rule. */}
+        <div className="shell pt-[var(--stack)] pb-[var(--stack)]">
+          <Reveal className={`${RAIL} border-t border-[var(--rule)] pt-[clamp(2.5rem,6vh,4rem)]`}>
+            <div className="lg:sticky lg:top-28 lg:self-start">
+              <p className="label rise">AI</p>
+              <h2
+                className="rise mt-3 text-[clamp(1.75rem,3.4vw,2.75rem)] font-medium leading-[1.02] tracking-[-0.04em]"
+                style={{ "--d": "60ms" } as React.CSSProperties}
+              >
+                I move faster with AI.
+              </h2>
+            </div>
+
+            <div className="max-w-[62ch]">
+              <div
+                className="rise"
+                style={{ "--d": "120ms" } as React.CSSProperties}
+              >
+                <Toolchain />
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

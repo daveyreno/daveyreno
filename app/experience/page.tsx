@@ -7,7 +7,7 @@ import { HITS, SIDE } from "@/lib/roles";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Product work across AI, FinTech, ConTech and LegalTech. rememberr, Soar, Lendi, Cranetime, LEGALNET, Crazy Domains and Bookables.",
+    "Product work across AI, AeroTech, FinTech, ConTech and LegalTech. rememberr, SupaDrone, Soar, Lendi, Cranetime, LEGALNET, Crazy Domains and Bookables.",
   alternates: { canonical: "/experience" },
 };
 
@@ -23,15 +23,19 @@ export default function ExperiencePage() {
           >
             Greatest hits.
           </h1>
-          {/* Two lines, always: a hard break rather than a max-width that
-              happens to wrap here and not on the next screen size. */}
+          {/* Three lines, always: hard breaks rather than a max-width that
+              happens to wrap here and not on the next screen size. AI gets its
+              own line because it is not another sector on the list, it is how
+              the recent work got built. */}
           <p
             className="lede rise mt-8"
             style={{ "--d": "170ms" } as React.CSSProperties}
           >
-            Six companies, three acquisitions, and one cheeky side gig.
+            Seven companies, three acquisitions, and one cheeky side gig.
             <br />
-            Tech infra, construction, law, finance, and now AI.
+            Tech infra, construction, law, finance and aerospace.
+            <br />
+            AI running through all of it now.
           </p>
         </Reveal>
       </section>

@@ -84,3 +84,28 @@ export const PLAYBOOK: Play[] = [
     body: "Push hardest when things are working, not only when they break. Everything that works today has a shelf life.",
   },
 ];
+
+export type Tool = {
+  name: string;
+  /** What it is actually used for here, not what the vendor calls it. */
+  note: string;
+  /** Icon key, resolved to a path in components/site/Toolchain.tsx. */
+  mark: "anthropic" | "openai";
+};
+
+/**
+ * The two houses whose models do the day-to-day work. Named, not badged: this
+ * is a record of what gets used, and implies no relationship with either.
+ */
+export const TOOLS: Tool[] = [
+  {
+    name: "Anthropic",
+    note: "Claude and Claude Code. Where most of the building happens.",
+    mark: "anthropic",
+  },
+  {
+    name: "OpenAI",
+    note: "Codex and the API. A second opinion, and a second pair of hands.",
+    mark: "openai",
+  },
+];
