@@ -31,7 +31,8 @@ export default function ExperiencePage() {
             className="lede rise mt-8"
             style={{ "--d": "170ms" } as React.CSSProperties}
           >
-            Seven companies, three acquisitions, and one cheeky side gig.
+            Six companies, three acquisitions, one build for hire and one
+            cheeky side gig.
             <br />
             Tech infra, construction, law, finance and aerospace.
             <br />
