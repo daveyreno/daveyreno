@@ -20,7 +20,7 @@ import { SITE_NAME } from "@/lib/site";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt =
-  "Davey Reno, Head of Product. Seventeen years across ConTech, LegalTech, FinTech and AI.";
+  "Davey Reno, senior product leader. Seventeen years across ConTech, LegalTech, FinTech and AI.";
 
 const INK = "#f4f4f2";
 const DIM = "rgba(244,244,242,0.62)";
@@ -81,7 +81,7 @@ export default async function Image() {
             <div style={{ ...label, color: INK }}>{SITE_NAME}</div>
             <div style={{ ...label, color: DIM }}>Product Manager</div>
           </div>
-          <div style={{ ...label, color: DIM }}>Perth, Australia</div>
+          <div style={{ ...label, color: DIM }}>Málaga, Spain</div>
         </div>
 
         {/* statement ------------------------------------------------------ */}

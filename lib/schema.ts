@@ -43,7 +43,7 @@ const person = {
   // The site never shows this name; the resume and every reference check do.
   alternateName: LEGAL_NAME,
   url: `${SITE_URL}/`,
-  jobTitle: "Head of Product",
+  jobTitle: "Senior Product Leader",
   description: SITE_DESCRIPTION,
   address: {
     "@type": "PostalAddress",

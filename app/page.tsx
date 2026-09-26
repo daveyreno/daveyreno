@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 /** Standing facts, in the register of a printed index. */
 const STANDING = [
-  { k: "Currently", v: ["Head of Product", "at rememberr"] },
-  { k: "Based", v: ["Perth, Australia", "Remote-fluent"] },
+  { k: "Currently", v: ["Open to new roles", "Building Bookables"] },
+  { k: "Based", v: ["Málaga, Spain", "Remote-fluent"] },
 ];
 
 export default function Home() {

@@ -17,12 +17,12 @@ export const SITE_NAME = "Davey Reno";
 export const LEGAL_NAME = "Dave Reynolds";
 
 export const SITE_DESCRIPTION =
-  "Head of Product. Seventeen years across ConTech, LegalTech, FinTech and AI. Strategy, design and working code from the same person.";
+  "Senior product leader. Seventeen years across ConTech, LegalTech, FinTech and AI. Strategy, design and working code from the same person.";
 
 export const LOCATION = {
-  locality: "Perth",
-  region: "WA",
-  country: "AU",
+  locality: "Málaga",
+  region: "Andalucía",
+  country: "ES",
 } as const;
 
 /** Rendered by the footer and emitted as `sameAs`. One list, both jobs. */

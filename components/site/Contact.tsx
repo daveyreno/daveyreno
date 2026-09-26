@@ -91,7 +91,7 @@ export default function Contact({
             <div>
               <Dialog.Title className="d3">Let’s talk.</Dialog.Title>
               <p id="contact-desc" className="label mt-2">
-                Perth, Australia · Open to new roles
+                Málaga, Spain · Open to new roles
               </p>
             </div>
             <Dialog.Close
